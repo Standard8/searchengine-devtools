@@ -74,6 +74,9 @@ def getIdForRecord(record):
     if "identifier" in record:
         return record["identifier"]
 
+    if "overridesAppIdv2" in record:
+        return record["overridesAppIdv2"] + record["thirdPartyId"]
+
     return record["recordType"]
 
 
